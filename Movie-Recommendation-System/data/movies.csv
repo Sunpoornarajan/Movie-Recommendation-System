@@ -1,0 +1,21 @@
+movieId,title,genres
+101,Inception,Sci-Fi|Thriller
+102,Interstellar,Sci-Fi|Drama
+103,The Dark Knight,Action|Crime
+104,Avengers,Action|Sci-Fi
+105,Titanic,Romance|Drama
+106,Avatar,Sci-Fi|Adventure
+107,Gladiator,Action|Drama
+108,Joker,Crime|Drama
+109,Forrest Gump,Drama|Romance
+110,The Matrix,Sci-Fi|Action
+111,Iron Man,Action|Sci-Fi
+112,Doctor Strange,Fantasy|Action
+113,Black Panther,Action|Sci-Fi
+114,The Shawshank Redemption,Drama
+115,The Godfather,Crime|Drama
+116,The Dark Knight Rises,Action|Crime
+117,Avengers Endgame,Action|Sci-Fi
+118,Parasite,Thriller|Drama
+119,Whiplash,Drama|Music
+120,La La Land,Romance|Music

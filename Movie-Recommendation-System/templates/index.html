@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 40px;
+        }
+
+        input {
+            padding: 12px;
+            width: 220px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #ff9800;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .genre {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffeb3b;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>🎬 Movie Recommendation System</h1>
+
+    <form method="post">
+        <input type="text" name="user_id" placeholder="Enter User ID">
+        <button type="submit">Recommend</button>
+    </form>
+
+    {% if movies %}
+    <h2>Recommended Movies</h2>
+
+    <div class="movies">
+        {% for movie in movies %}
+        <div class="card">
+            <div class="title">{{ movie.title }}</div>
+            <div class="genre">🎭 {{ movie.genres.replace("|", ", ") }}</div>
+            <div class="rating">⭐ Rating: {{ movie.rating }}/5</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        Intelligent Movie Recommendation System using Collaborative Filtering & KNN
+    </div>
+
+</div>
+</body>
+</html>
